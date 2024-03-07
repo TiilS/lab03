@@ -1,6 +1,14 @@
 ## Homework
 - > https://github.com/tp-labs/lab02?tab=readme-ov-file
 
+> Установка формата
+```
+
+$ clang-format -style=mozilla -dump-config > .clang-format
+$ clang-format -i *.cpp
+
+```
+
 ```
 $ git pull --rebase origin master
   remote: Enumerating objects: 5, done.
