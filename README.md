@@ -233,3 +233,16 @@ add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../solver_lib/ solver_lib)
 
 target_link_libraries(main formatter_ex_lib solver_lib)		# Линковка программы с библиотекой
 ```
+# 2. Solver_lib
+CMakeLists.txt
+```
+cmake_minimum_required(VERSION 3.22) # Проверка версии CMake.
+									# Если версия установленой программы
+									# старее указаной, произайдёт аварийный выход.
+
+project(solver_lib)				# Название проекта
+
+set(SOURCE_LIB solver.cpp solver.h)		# Установка переменной со списком исходников
+
+add_library(solver_lib STATIC ${SOURCE_LIB})# Создание статической библиотеки
+```
